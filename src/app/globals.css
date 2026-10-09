@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --canvas: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --muted: #f1f5f9;
+    --muted-foreground: #475569;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --primary: #0d9488;
+    --primary-hover: #0f766e;
+    --primary-foreground: #ffffff;
+    --cyan: #06b6d4;
+    --emerald: #10b981;
+    --rose: #ef4444;
+  }
+
+  .dark {
+    --background: #090d16;
+    --canvas: #060910;
+    --foreground: #f8fafc;
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --border: #1e293b;
+    --border-strong: #334155;
+    --primary: #0d9488;
+    --primary-hover: #14b8a6;
+    --primary-foreground: #ffffff;
+    --cyan: #22d3ee;
+    --emerald: #34d399;
+    --rose: #f87171;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Navigation */
+.glass-header {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-header {
+  background: rgba(9, 13, 22, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Clinical Hairline Borders */
+.clinical-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.clinical-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+}
+
+.dark .clinical-card:hover {
+  border-color: #334155;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Tabular figures for clinical metrics and INR currency */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 21st.dev Inspired Precision Micro-Animations */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+
+  40%,
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
+  animation: shimmer-sweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes tab-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-tab-fade {
+  animation: tab-fade-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes ambient-pulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-ambient-pulse {
+  animation: ambient-pulse 5s ease-in-out infinite;
+}
