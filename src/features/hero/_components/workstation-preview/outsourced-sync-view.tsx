@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Layers, ArrowRight, CheckCircle2, Building } from 'lucide-react';
 
 export function OutsourcedSyncView() {

@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import {
   FileText,
   Layers,
@@ -119,48 +118,48 @@ export function Pillars() {
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-teal-100 text-teal-800 border border-teal-300">
             <span>Six Core Operational Modules</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Built Around How Indian Diagnostic Labs <br className="hidden sm:inline" />
             <span className="text-teal-700">Actually Operate Every Single Day.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
             Existing hospital LIMS products cost ₹1L–3L+ and are built for tertiary hospitals with IT departments. Pathiq is purpose-engineered for the independent lab owner doing 10–50 samples a day.
           </p>
         </div>
 
         {/* 6 High-Impact Operational Capability Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {modules.map((m, index) => {
             const Icon = m.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xs hover:border-teal-400 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group"
+                className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs hover:border-teal-400 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-5 group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-2.5 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 group-hover:scale-108 group-hover:bg-teal-100/80 transition-all duration-300">
+                    <div className="p-3 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 group-hover:scale-108 group-hover:bg-teal-100/80 transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono tracking-wider px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 uppercase font-semibold">
+                    <span className="text-xs font-mono tracking-wider px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 uppercase font-semibold">
                       {m.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 tracking-tight leading-snug">
+                  <h3 className="text-lg font-bold text-slate-900 tracking-tight leading-snug">
                     {m.title}
                   </h3>
 
-                  <div className="space-y-2 text-xs">
-                    <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-slate-600 leading-relaxed">
-                      <strong className="text-slate-800 block text-[11px] mb-0.5 font-sans">
+                  <div className="space-y-2.5 text-xs sm:text-sm">
+                    <div className="bg-slate-50 p-3 rounded-xl border border-slate-100 text-slate-600 leading-relaxed">
+                      <strong className="text-slate-900 block text-xs mb-1 font-sans font-bold">
                         The Friction:
                       </strong>
                       {m.problem}
                     </div>
 
-                    <div className="bg-teal-50/50 p-2.5 rounded-lg border border-teal-100 text-slate-700 leading-relaxed">
-                      <strong className="text-teal-900 block text-[11px] mb-0.5 font-sans">
+                    <div className="bg-teal-50/60 p-3 rounded-xl border border-teal-100 text-slate-700 leading-relaxed">
+                      <strong className="text-teal-900 block text-xs mb-1 font-sans font-bold">
                         Pathiq Solution:
                       </strong>
                       {m.solution}
@@ -168,14 +167,14 @@ export function Pillars() {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 space-y-1.5">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold mb-1">
+                <div className="pt-4 border-t border-slate-100 space-y-2">
+                  <div className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold mb-1.5">
                     What You Get:
                   </div>
                   {m.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-1.5 text-xs text-slate-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 shrink-0 mt-0.5" />
-                      <span className="text-[11px] leading-snug">{h}</span>
+                    <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                      <span className="leading-snug">{h}</span>
                     </div>
                   ))}
                 </div>

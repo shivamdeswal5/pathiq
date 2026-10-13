@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Sliders, Plus, CheckCircle2, IndianRupee } from 'lucide-react';
 
 export function CatalogPreview() {

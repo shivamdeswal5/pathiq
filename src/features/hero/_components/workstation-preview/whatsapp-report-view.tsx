@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { FileText, QrCode, ShieldCheck, CheckCheck } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
 

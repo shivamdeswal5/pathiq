@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Check, X, Minus, Sparkles } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 
@@ -54,54 +53,54 @@ export function Comparison() {
     <section id="comparison" className="py-20 bg-white border-b border-slate-200">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <span className="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-teal-700 font-bold">
             The Clear Choice
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Built from Scratch for Independent Labs. <br className="hidden sm:inline" />
             <span className="text-teal-700">Not a Downsized Hospital System.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Compare Pathiq to running your lab on physical paper registers or expensive hospital EHRs.
           </p>
         </div>
 
-        <div className="overflow-x-auto border border-slate-200 rounded-xl shadow-xs">
-          <table className="w-full text-left border-collapse min-w-[650px]">
+        <div className="overflow-x-auto border border-slate-200 rounded-2xl shadow-xs bg-white">
+          <table className="w-full text-left border-collapse min-w-[650px] text-sm">
             <thead>
-              <tr className="bg-slate-50 border-b border-slate-200 text-xs font-bold text-slate-700">
-                <th className="py-3.5 px-4 w-1/4">Capability</th>
-                <th className="py-3.5 px-4 w-1/4">Paper Registers</th>
-                <th className="py-3.5 px-4 w-1/4">Hospital EHR Tools</th>
-                <th className="py-3.5 px-4 w-1/4 bg-teal-50/80 text-teal-900 border-x border-teal-200 font-extrabold">
+              <tr className="bg-slate-50 border-b border-slate-200 font-bold text-slate-700">
+                <th className="py-4 px-5 w-1/4 text-sm">Capability</th>
+                <th className="py-4 px-5 w-1/4 text-sm">Paper Registers</th>
+                <th className="py-4 px-5 w-1/4 text-sm">Hospital EHR Tools</th>
+                <th className="py-4 px-5 w-1/4 bg-teal-50/80 text-teal-900 border-x border-teal-200 font-extrabold text-sm">
                   <div className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-teal-700" />
+                    <Sparkles className="w-4 h-4 text-teal-700" />
                     <span>Pathiq LabOS</span>
                   </div>
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-xs">
+            <tbody className="divide-y divide-slate-100 text-sm">
               {comparisonRows.map((row, index) => (
                 <tr key={index} className="hover:bg-slate-50/60 transition-colors">
-                  <td className="py-3.5 px-4 font-semibold text-slate-900">
+                  <td className="py-4 px-5 font-semibold text-slate-900">
                     {row.feature}
                   </td>
-                  <td className="py-3.5 px-4 text-slate-500">
-                    <div className="flex items-start gap-1.5">
-                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                  <td className="py-4 px-5 text-slate-500">
+                    <div className="flex items-start gap-2">
+                      <X className="w-4.5 h-4.5 text-rose-500 shrink-0 mt-0.5" />
                       <span>{row.paper}</span>
                     </div>
                   </td>
-                  <td className="py-3.5 px-4 text-slate-500">
-                    <div className="flex items-start gap-1.5">
-                      <Minus className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                  <td className="py-4 px-5 text-slate-500">
+                    <div className="flex items-start gap-2">
+                      <Minus className="w-4.5 h-4.5 text-amber-500 shrink-0 mt-0.5" />
                       <span>{row.hospitalEhr}</span>
                     </div>
                   </td>
-                  <td className="py-3.5 px-4 font-semibold text-teal-950 bg-teal-50/40 border-x border-teal-100">
-                    <div className="flex items-start gap-1.5">
-                      <Check className="w-4 h-4 text-teal-700 shrink-0 mt-0.5 font-bold" />
+                  <td className="py-4 px-5 font-semibold text-teal-950 bg-teal-50/40 border-x border-teal-100">
+                    <div className="flex items-start gap-2">
+                      <Check className="w-4.5 h-4.5 text-teal-700 shrink-0 mt-0.5 font-bold" />
                       <span>{row.pathiq}</span>
                     </div>
                   </td>

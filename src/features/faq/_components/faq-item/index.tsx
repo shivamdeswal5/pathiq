@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { ChevronDown } from 'lucide-react';
 
 export interface FaqItemProps {
@@ -16,17 +15,17 @@ export function FaqItem({ question, answer, isOpen, onToggle }: FaqItemProps) {
       <button
         type="button"
         onClick={onToggle}
-        className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-xs sm:text-sm text-slate-900 hover:text-teal-700 transition-colors cursor-pointer"
+        className="w-full py-4.5 px-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-900 hover:text-teal-700 transition-colors cursor-pointer"
       >
         <span>{question}</span>
         <ChevronDown
-          className={`w-4 h-4 text-teal-600 shrink-0 transition-transform duration-200 ${
+          className={`w-5 h-5 text-teal-600 shrink-0 transition-transform duration-200 ${
             isOpen ? 'transform rotate-180' : ''
           }`}
         />
       </button>
       {isOpen && (
-        <div className="px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-150">
+        <div className="px-6 pb-6 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5 animate-in fade-in duration-150">
           {answer}
         </div>
       )}

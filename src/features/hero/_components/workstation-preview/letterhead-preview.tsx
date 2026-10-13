@@ -1,10 +1,10 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Sliders, CheckCircle2, Ruler } from 'lucide-react';
 
 export function LetterheadPreview() {
-  const [marginMm, setMarginMm] = React.useState(42);
+  const [marginMm, setMarginMm] = useState(42);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">

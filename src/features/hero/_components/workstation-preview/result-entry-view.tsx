@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { AlertCircle, CheckCircle2, Zap } from 'lucide-react';
 
 const parameters = [

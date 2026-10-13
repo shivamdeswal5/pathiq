@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { HTMLAttributes } from 'react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: 'teal' | 'emerald' | 'amber' | 'rose' | 'slate' | 'cyan';
 }
 

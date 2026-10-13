@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShieldCheck, Heart } from 'lucide-react';
@@ -9,29 +8,29 @@ import { config } from '@/lib/config';
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-12 text-slate-600 text-xs">
+    <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
           {/* Brand Info */}
           <div className="space-y-4 md:col-span-2">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-teal-100 border border-teal-200 p-1 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-teal-100 border border-teal-200 p-1 flex items-center justify-center">
                 <Image
                   src="/logo.svg"
                   alt="Pathiq Logo"
-                  width={24}
-                  height={24}
+                  width={26}
+                  height={26}
                   className="object-contain"
                 />
               </div>
-              <span className="font-bold text-base text-slate-900 tracking-tight">Pathiq</span>
+              <span className="font-bold text-lg text-slate-900 tracking-tight">Pathiq</span>
             </Link>
 
-            <p className="text-slate-600 leading-relaxed max-w-sm">
+            <p className="text-slate-600 leading-relaxed max-w-sm text-sm">
               The operating system purpose-built for India&apos;s independent pathology labs. Eliminating paper registers, mislabeled vacutainers, and manual WhatsApp messaging.
             </p>
 
-            <div className="flex items-center gap-2 text-teal-800 text-[11px] font-mono">
+            <div className="flex items-center gap-2 text-teal-800 text-xs font-mono">
               <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0" />
               <span>NABL ISO 15189 &amp; NMC Regulatory Aligned</span>
             </div>
@@ -39,10 +38,10 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-slate-900 uppercase tracking-wider text-[11px] font-mono">
+            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-xs font-mono">
               Navigation
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/" className="hover:text-teal-700 transition-colors">
                   Platform Overview
@@ -78,10 +77,10 @@ export function Footer() {
 
           {/* Legal & Regulatory Compliance (Razorpay Mandate) */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-slate-900 uppercase tracking-wider text-[11px] font-mono">
+            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-xs font-mono">
               Legal &amp; Policy
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/terms" className="hover:text-teal-700 transition-colors">
                   Terms &amp; Conditions
@@ -107,7 +106,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-xs">
           <div>
             &copy; {new Date().getFullYear()} Pathiq Health Technologies. All rights reserved.
           </div>

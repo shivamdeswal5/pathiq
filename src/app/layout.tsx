@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { config } from '@/lib/config';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.pathiq.in';
+const SITE_URL = config.siteUrl;
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
@@ -10,7 +12,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,
   title: "Pathiq — Operating System for India's Standalone Pathology Labs",
   description:
     "Say goodbye to paper registers and manual WhatsApp typing. Automated 50×25mm thermal barcode stickers, zero-drift offset letterhead alignment, 1-click WhatsApp PDF delivery, and doctor referral ledgers.",
@@ -90,7 +92,7 @@ const structuredData = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  app:
+    container_name: labos-web
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+      args:
+        - NEXT_PUBLIC_BASE_PATH=
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - ${APP_FORWARD_PORT:-3002}:${PORT:-3002}
+    expose:
+      - ${PORT:-3002}
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
+    networks:
+      - labos-network
+
+networks:
+  labos-network:
+    name: labos-network
+    external: true

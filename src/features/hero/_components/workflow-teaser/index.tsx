@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
 import { Container } from '@/components/ui/container';

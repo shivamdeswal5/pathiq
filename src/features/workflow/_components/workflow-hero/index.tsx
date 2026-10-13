@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Clock, ShieldCheck, Sparkles } from 'lucide-react';
 
 export function WorkflowHero() {
@@ -14,17 +13,17 @@ export function WorkflowHero() {
         <span className="text-teal-700">Operate at Zero-Defect Precision.</span>
       </h1>
 
-      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
+      <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
         From the moment a patient reaches your intake desk to the certified WhatsApp PDF delivery on their smartphone. See the exact sequential workflow engineered for 10–50 samples/day labs.
       </p>
 
-      <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-mono">
+      <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600 font-mono">
         <span className="flex items-center gap-1.5">
-          <ShieldCheck className="w-4 h-4 text-teal-600" />
+          <ShieldCheck className="w-4.5 h-4.5 text-teal-600" />
           <span>NMC &amp; NABL ISO 15189 Aligned</span>
         </span>
         <span className="flex items-center gap-1.5">
-          <Sparkles className="w-4 h-4 text-emerald-600" />
+          <Sparkles className="w-4.5 h-4.5 text-emerald-600" />
           <span>No IT Setup Required</span>
         </span>
       </div>

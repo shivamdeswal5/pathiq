@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Fragment } from 'react';
 import { Check, Minus } from 'lucide-react';
 
 interface FeatureRow {
@@ -119,45 +119,45 @@ const matrixSections: { title: string; features: FeatureRow[] }[] = [
 function RenderValue({ val }: { val: string | boolean }) {
   if (typeof val === 'boolean') {
     return val ? (
-      <Check className="w-4 h-4 text-teal-600 font-bold mx-auto" />
+      <Check className="w-4.5 h-4.5 text-teal-600 font-bold mx-auto" />
     ) : (
-      <Minus className="w-4 h-4 text-slate-300 mx-auto" />
+      <Minus className="w-4.5 h-4.5 text-slate-300 mx-auto" />
     );
   }
-  return <span className="font-semibold text-slate-800 text-xs">{val}</span>;
+  return <span className="font-semibold text-slate-800 text-sm">{val}</span>;
 }
 
 export function FeatureMatrix() {
   return (
     <div className="mt-16 space-y-6">
       <div className="text-center space-y-2">
-        <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           Complete Feature Comparison Matrix
         </h3>
-        <p className="text-xs text-slate-600 max-w-xl mx-auto">
+        <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
           Detailed breakdown of diagnostic, clinical, hardware, and billing capabilities across each tier.
         </p>
       </div>
 
       <div className="overflow-x-auto border border-slate-200 rounded-2xl bg-white shadow-xs">
-        <table className="w-full text-left border-collapse min-w-[650px] text-xs">
+        <table className="w-full text-left border-collapse min-w-[650px] text-sm">
           <thead>
             <tr className="bg-slate-50 border-b border-slate-200 font-bold text-slate-700">
-              <th className="py-3.5 px-4 w-2/5">Capability Specification</th>
-              <th className="py-3.5 px-4 text-center w-1/5">Starter (₹499)</th>
-              <th className="py-3.5 px-4 text-center w-1/5 bg-teal-50/70 text-teal-900 border-x border-teal-200">
+              <th className="py-4 px-5 w-2/5 text-sm">Capability Specification</th>
+              <th className="py-4 px-5 text-center w-1/5 text-sm">Starter (₹499)</th>
+              <th className="py-4 px-5 text-center w-1/5 bg-teal-50/70 text-teal-900 border-x border-teal-200 text-sm">
                 Growth (₹999)
               </th>
-              <th className="py-3.5 px-4 text-center w-1/5">Scale (₹1,999)</th>
+              <th className="py-4 px-5 text-center w-1/5 text-sm">Scale (₹1,999)</th>
             </tr>
           </thead>
           <tbody>
             {matrixSections.map((sec, secIdx) => (
-              <React.Fragment key={secIdx}>
+              <Fragment key={secIdx}>
                 <tr className="bg-slate-100/70 border-y border-slate-200">
                   <td
                     colSpan={4}
-                    className="py-2.5 px-4 font-bold text-slate-800 uppercase tracking-wider text-[10px] font-mono"
+                    className="py-3 px-5 font-bold text-slate-800 uppercase tracking-wider text-xs font-mono"
                   >
                     {sec.title}
                   </td>
@@ -167,19 +167,19 @@ export function FeatureMatrix() {
                     key={featIdx}
                     className="border-b border-slate-100 hover:bg-slate-50/60 transition-colors"
                   >
-                    <td className="py-3 px-4 font-medium text-slate-800">{feat.name}</td>
-                    <td className="py-3 px-4 text-center">
+                    <td className="py-3.5 px-5 font-medium text-slate-800">{feat.name}</td>
+                    <td className="py-3.5 px-5 text-center">
                       <RenderValue val={feat.starter} />
                     </td>
-                    <td className="py-3 px-4 text-center bg-teal-50/30 border-x border-teal-100">
+                    <td className="py-3.5 px-5 text-center bg-teal-50/30 border-x border-teal-100">
                       <RenderValue val={feat.growth} />
                     </td>
-                    <td className="py-3 px-4 text-center">
+                    <td className="py-3.5 px-5 text-center">
                       <RenderValue val={feat.scale} />
                     </td>
                   </tr>
                 ))}
-              </React.Fragment>
+              </Fragment>
             ))}
           </tbody>
         </table>

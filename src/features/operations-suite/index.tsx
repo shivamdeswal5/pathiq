@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Container } from '@/components/ui/container';
 import { Sliders, ShieldCheck, Home, Radio, Settings } from 'lucide-react';
 import { CatalogPreview } from './_components/catalog-preview';
@@ -20,7 +20,7 @@ const tabs = [
 ];
 
 export function OperationsSuite() {
-  const [activeTab, setActiveTab] = React.useState<SuiteTab>('catalog');
+  const [activeTab, setActiveTab] = useState<SuiteTab>('catalog');
 
   return (
     <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
@@ -31,17 +31,17 @@ export function OperationsSuite() {
             <span>Complete Platform Depth</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Beyond Basic Reporting: <br className="hidden sm:inline" />
             <span className="text-teal-700">The Full Diagnostic Operations Engine.</span>
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Everything your lab needs to maintain clinical precision, control staff access, eliminate cash pilferage, and manage tests — without expensive IT retainers.
           </p>
 
           {/* Interactive Suite Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 pt-4">
             {tabs.map((t) => {
               const Icon = t.icon;
               const isActive = activeTab === t.key;
@@ -50,13 +50,13 @@ export function OperationsSuite() {
                   key={t.key}
                   type="button"
                   onClick={() => setActiveTab(t.key)}
-                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                     isActive
                       ? 'bg-teal-700 text-white shadow-xs font-bold'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80 hover:text-slate-900'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-teal-200' : 'text-slate-500'}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-teal-200' : 'text-slate-500'}`} />
                   <span>{t.label}</span>
                 </button>
               );

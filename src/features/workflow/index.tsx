@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { UserCheck, FileText, Layers, Send, Wallet } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { WorkflowHero } from './_components/workflow-hero';

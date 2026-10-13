@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Settings, FileText, CheckCircle2, ShieldCheck, PenTool } from 'lucide-react';
 
 export function SettingsPreview() {

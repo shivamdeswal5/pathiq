@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Clock, CheckCircle2, Home, ArrowRight } from 'lucide-react';
 
 const accessions = [

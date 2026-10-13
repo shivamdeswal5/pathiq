@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Users2, FileSpreadsheet } from 'lucide-react';
 
 const doctorLedgers = [

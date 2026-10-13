@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Users2, Wallet, CheckCircle2 } from 'lucide-react';
 
 export function LedgerPreview() {

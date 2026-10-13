@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { LucideIcon, CheckCircle2 } from 'lucide-react';
 
 export interface PillarCardProps {

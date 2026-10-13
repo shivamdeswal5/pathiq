@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Send, FileCheck, CheckCircle2, QrCode, ShieldCheck } from 'lucide-react';
 
 export function WhatsappPreview() {

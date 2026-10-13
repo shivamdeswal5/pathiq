@@ -1,10 +1,10 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Printer, Tag, CheckCircle2 } from 'lucide-react';
 
 export function BarcodePreview() {
-  const [printed, setPrinted] = React.useState(false);
+  const [printed, setPrinted] = useState(false);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">

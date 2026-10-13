@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Container } from '@/components/ui/container';
 import { BillingToggle } from './_components/billing-toggle';
 import { PlanCard, type PlanData } from './_components/plan-card';
@@ -62,20 +62,20 @@ const pricingPlans: PlanData[] = [
 ];
 
 export function PricingSection() {
-  const [isAnnual, setIsAnnual] = React.useState(true);
+  const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <section id="pricing" className="py-16 sm:py-24 bg-slate-50/50 border-b border-slate-200">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <span className="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-teal-700 font-bold">
             Transparent Pricing
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Simple, Flat Pricing for Every Stage <br className="hidden sm:inline" />
             <span className="text-teal-700">of Your Diagnostic Lab.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             No surprise per-SMS charges. No hidden analyzer integration fees. Transparent pricing with instant UPI &amp; NetBanking activation.
           </p>
 

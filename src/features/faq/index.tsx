@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Container } from '@/components/ui/container';
 import { FaqItem } from './_components/faq-item';
 
@@ -36,19 +36,19 @@ const faqsData = [
 ];
 
 export function FaqSection() {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section id="faq" className="py-20 bg-white border-b border-slate-200">
       <Container size="narrow">
-        <div className="text-center mb-12 space-y-2">
-          <span className="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">
+        <div className="text-center mb-14 space-y-3">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-teal-700 font-bold">
             Frequently Asked Questions
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Everything You Need to Know
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
             Common questions from Indian laboratory owners adopting Pathiq.
           </p>
         </div>

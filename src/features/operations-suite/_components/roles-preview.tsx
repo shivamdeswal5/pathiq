@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { ShieldCheck, UserCheck, Stethoscope, FlaskConical, MapPin } from 'lucide-react';
 
 const roles = [
@@ -43,7 +43,7 @@ const roles = [
 ];
 
 export function RolesPreview() {
-  const [selectedRole, setSelectedRole] = React.useState('LAB OWNER');
+  const [selectedRole, setSelectedRole] = useState('LAB OWNER');
 
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs space-y-4 text-xs font-sans">

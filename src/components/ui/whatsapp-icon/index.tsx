@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { SVGProps } from 'react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-export interface WhatsAppIconProps extends React.SVGProps<SVGSVGElement> {
+export interface WhatsAppIconProps extends SVGProps<SVGSVGElement> {
   className?: string;
   size?: number;
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Radio, Bell, CheckCircle2, ShieldAlert } from 'lucide-react';
 
 const liveEvents = [

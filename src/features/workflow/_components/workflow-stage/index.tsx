@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { LucideIcon, CheckCircle2 } from 'lucide-react';
 
 export interface WorkflowStageProps {
@@ -45,33 +44,33 @@ export function WorkflowStage({
           </span>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">{title}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">{title}</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
-          <div className="bg-rose-50/60 p-3.5 rounded-xl border border-rose-200/80 space-y-1">
-            <span className="font-mono font-bold text-rose-800 uppercase text-[10px] tracking-wider block">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm pt-1">
+          <div className="bg-rose-50/60 p-4 rounded-xl border border-rose-200/80 space-y-1.5">
+            <span className="font-mono font-bold text-rose-800 uppercase text-xs tracking-wider block">
               Traditional Lab Friction
             </span>
             <p className="text-slate-700 leading-relaxed">{problem}</p>
           </div>
 
-          <div className="bg-teal-50/60 p-3.5 rounded-xl border border-teal-200/80 space-y-1">
-            <span className="font-mono font-bold text-teal-800 uppercase text-[10px] tracking-wider block">
+          <div className="bg-teal-50/60 p-4 rounded-xl border border-teal-200/80 space-y-1.5">
+            <span className="font-mono font-bold text-teal-800 uppercase text-xs tracking-wider block">
               The Pathiq Operating System
             </span>
             <p className="text-slate-700 leading-relaxed">{solution}</p>
           </div>
         </div>
 
-        <div className="pt-3 border-t border-slate-100 space-y-2">
-          <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-bold block">
+        <div className="pt-3.5 border-t border-slate-100 space-y-2.5">
+          <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold block">
             Key Diagnostic Capabilities:
           </span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-slate-700">
             {highlights.map((h, i) => (
               <div key={i} className="flex items-start gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 shrink-0 mt-0.5" />
-                <span>{h}</span>
+                <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                <span className="leading-snug">{h}</span>
               </div>
             ))}
           </div>

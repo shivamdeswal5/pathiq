@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { WorklistView } from './worklist-view';
 import { ResultEntryView } from './result-entry-view';
 import { OutsourcedSyncView } from './outsourced-sync-view';
@@ -24,7 +24,7 @@ const TABS: TabItem[] = [
 ];
 
 export function WorkstationPreview() {
-  const [activeTab, setActiveTab] = React.useState<TabKey>('worklist');
+  const [activeTab, setActiveTab] = useState<TabKey>('worklist');
 
   return (
     <div className="relative mt-12 max-w-5xl mx-auto group">

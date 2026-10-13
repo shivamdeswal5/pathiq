@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { Home, MapPin, Clock, CheckCircle2, User, Phone } from 'lucide-react';
 
 export function CollectionsPreview() {
