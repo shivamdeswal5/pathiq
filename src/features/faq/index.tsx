@@ -22,6 +22,10 @@ const faqsData = [
     a: 'Pathiq supports instant 1-click WhatsApp delivery directly from the test sign-off screen with pre-filled patient greetings and authenticated download links. There are zero hidden per-message SMS costs.',
   },
   {
+    q: 'How does the AI Clinical Assistant and Bilingual Explainer work? Is it legally compliant?',
+    a: 'Pathiq includes an integrated AI assistant powered by clinical guardrails strictly aligned with the National Medical Commission (NMC) Act 2019 and NABL ISO 15189 standards. For pathologists, it analyzes out-of-range parameters to draft provisional differential impressions, cutting typing time by 70% while keeping final sign-off strictly under doctor control. For patients, it generates an easy-to-understand Bilingual Smart Health Summary (Hindi & English) on their WhatsApp report link, explaining results in reassuring layperson terms and explicitly directing them to their treating physician.',
+  },
+  {
     q: 'What happens when my 14-day free trial ends?',
     a: 'You can upgrade in under 60 seconds using any domestic UPI application (PhonePe, Google Pay, Paytm) or NetBanking. In accordance with our Patient Safety Invariant, if payment is delayed, our 72-hour grace period ensures you can always access, view, and print existing patient reports.',
   },

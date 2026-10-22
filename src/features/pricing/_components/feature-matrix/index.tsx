@@ -114,6 +114,35 @@ const matrixSections: { title: string; features: FeatureRow[] }[] = [
       },
     ],
   },
+  {
+    title: 'AI Intelligence & Patient Communication',
+    features: [
+      {
+        name: '✨ AI Clinical Impression Assistant (NMC Act 2019 Aligned)',
+        starter: true,
+        growth: true,
+        scale: true,
+      },
+      {
+        name: '✨ Bilingual Smart Health Summary (Hindi & English)',
+        starter: true,
+        growth: true,
+        scale: true,
+      },
+      {
+        name: 'WhatsApp Layperson Explainer with Doctor Direction',
+        starter: true,
+        growth: true,
+        scale: true,
+      },
+      {
+        name: 'Deterministic Fallback Engine (Zero Downtime / Offline)',
+        starter: true,
+        growth: true,
+        scale: true,
+      },
+    ],
+  },
 ];
 
 function RenderValue({ val }: { val: string | boolean }) {

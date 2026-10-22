@@ -15,16 +15,16 @@ const modules = [
   {
     badge: 'Core Clinical Workflow',
     badgeColor: 'teal',
-    title: 'Fast Test Result Entry & Automated Panic Flagging',
+    title: 'Fast Result Entry, Panic Flagging & AI Impression Assistant',
     problem:
-      'Typing values into unstructured Word templates or writing by hand leads to calculation errors and missed critical values.',
+      'Typing values into unstructured Word templates or writing by hand leads to calculation errors, missed critical values, and slow typing of clinical impressions.',
     solution:
-      'High-speed numerical data entry matching your paper lab sheets. Automatically loads age & gender biological reference ranges and flags out-of-range panic values in RED so no critical patient result is missed.',
+      'High-speed numerical data entry matching your paper lab sheets. Automatically flags out-of-range panic values in RED, and drafts 1-click AI clinical impressions for abnormal CBC/LFT/KFT findings under pathologist control.',
     highlights: [
       'Config-driven test panels: CBC, LFT, KFT, Lipid, Thyroid & customized profiles',
       'Age & gender-stratified biological reference ranges auto-applied',
       'Visual panic flagging: Instant red alerts for life-threatening abnormal levels',
-      'Reprint past patient reports in seconds without re-entering parameters',
+      '✨ AI Clinical Impression Co-Pilot: 1-click provisional remarks drafting saving 70% typing time',
     ],
     icon: FileText,
   },
@@ -79,16 +79,16 @@ const modules = [
   {
     badge: 'Patient Delight',
     badgeColor: 'teal',
-    title: '1-Click WhatsApp PDF Delivery & Verified QR Tokens',
+    title: '1-Click WhatsApp PDF Delivery & Bilingual AI Explainer',
     problem:
-      'Downloading PDFs to desktop, manually adding 30+ strangers to phone contacts daily, and searching chat lists wastes hours.',
+      'Downloading PDFs, saving 30+ stranger contacts daily, and answering repeated anxious phone calls asking "Report mein kya aaya hai?" wastes hours.',
     solution:
-      'Deliver finalized, certified reports in 1 click directly to the patient’s WhatsApp number. Patients receive an authenticated PDF download with a tamper-proof public QR verification token for referring physicians.',
+      'Deliver certified reports in 1 click directly to WhatsApp with tamper-proof QR tokens. Includes an AI-generated Bilingual Smart Health Summary (Hindi & English) that answers patient questions and directs them to their doctor.',
     highlights: [
       'Direct WhatsApp message link with personalized patient greeting',
-      'Zero phone contact saving required on technician devices',
+      '✨ Bilingual Smart Summary (Hindi & English) explaining findings in plain words',
       'Tamper-proof public QR verification token prevents forged report disputes',
-      'Drastically cuts down on patient phone calls asking &quot;Is my report ready?&quot;',
+      'Eliminates repetitive patient phone calls asking &quot;What does my report mean?&quot;',
     ],
     icon: Send,
   },

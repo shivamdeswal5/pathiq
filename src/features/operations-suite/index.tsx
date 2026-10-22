@@ -2,16 +2,18 @@
 
 import { useState } from 'react';
 import { Container } from '@/components/ui/container';
-import { Sliders, ShieldCheck, Home, Radio, Settings } from 'lucide-react';
+import { Sliders, ShieldCheck, Home, Radio, Settings, Sparkles } from 'lucide-react';
 import { CatalogPreview } from './_components/catalog-preview';
 import { RolesPreview } from './_components/roles-preview';
 import { CollectionsPreview } from './_components/collections-preview';
 import { TelemetryPreview } from './_components/telemetry-preview';
 import { SettingsPreview } from './_components/settings-preview';
+import { AiPreview } from './_components/ai-preview';
 
-type SuiteTab = 'catalog' | 'roles' | 'collections' | 'telemetry' | 'settings';
+type SuiteTab = 'ai' | 'catalog' | 'roles' | 'collections' | 'telemetry' | 'settings';
 
 const tabs = [
+  { key: 'ai' as SuiteTab, label: '✨ AI Co-Pilot & Explainer', icon: Sparkles },
   { key: 'catalog' as SuiteTab, label: 'Test Catalog & Pricing', icon: Sliders },
   { key: 'roles' as SuiteTab, label: 'Role & Persona Simulator', icon: ShieldCheck },
   { key: 'collections' as SuiteTab, label: 'Home Phlebotomy Queue', icon: Home },
@@ -20,7 +22,7 @@ const tabs = [
 ];
 
 export function OperationsSuite() {
-  const [activeTab, setActiveTab] = useState<SuiteTab>('catalog');
+  const [activeTab, setActiveTab] = useState<SuiteTab>('ai');
 
   return (
     <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
@@ -66,6 +68,7 @@ export function OperationsSuite() {
 
         {/* Dynamic Interactive Preview Canvas with Smooth Fade Animation */}
         <div key={activeTab} className="max-w-5xl mx-auto animate-tab-fade">
+          {activeTab === 'ai' && <AiPreview />}
           {activeTab === 'catalog' && <CatalogPreview />}
           {activeTab === 'roles' && <RolesPreview />}
           {activeTab === 'collections' && <CollectionsPreview />}

@@ -19,6 +19,7 @@ const pricingPlans: PlanData[] = [
     features: [
       'Up to 2 Staff / Technician Logins',
       'Up to 600 Monthly Samples',
+      '✨ AI Clinical Remarks & WhatsApp Explainer',
       '50×25mm Thermal Barcode Printing',
       'Pre-Printed Letterhead Margin Calibration',
       '1-Click WhatsApp PDF Report Delivery',
@@ -37,6 +38,7 @@ const pricingPlans: PlanData[] = [
       'Up to 5 Staff & Phlebotomist Logins',
       'Up to 2,000 Monthly Samples',
       'Everything in Starter Tier',
+      '✨ AI Clinical Remarks & WhatsApp Explainer',
       'Doctor Referral Commission Ledger (TDS 194H)',
       'Direct USB / Bluetooth Barcode Scanner Intake',
       'NABL Outsourced Sample Sync Tracking',
@@ -54,6 +56,7 @@ const pricingPlans: PlanData[] = [
       'Unlimited Staff & Phlebotomist Logins',
       'Unlimited Monthly Sample Accessions',
       'Everything in Growth Tier',
+      '✨ Priority AI Engine & Custom Clinical Rules',
       'Home Phlebotomy Booking Workstation',
       'Priority Support Line',
       'Custom Letterhead Offset Calibration Profiles',

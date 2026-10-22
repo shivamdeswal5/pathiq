@@ -26,16 +26,16 @@ const stages: WorkflowStageProps[] = [
   {
     stepNumber: '02',
     badge: 'Clinical Accuracy',
-    title: 'Rapid Numerical Result Entry with Automated Panic Value Flagging',
+    title: 'Rapid Numerical Result Entry with Automated Panic Flagging & AI Impression',
     timeEstimate: 'Under 90 Seconds',
     problem:
-      'Typing values into unstructured Word files leads to calculation errors and missed life-threatening abnormal levels (e.g. Platelets < 20,000 or Glucose > 400).',
+      'Typing values into unstructured Word files leads to calculation errors, missed life-threatening abnormal levels, and slow typing of clinical impressions.',
     solution:
-      'High-speed numerical bench entry matching your paper lab sheets. Automatically loads age & gender biological reference ranges and flags out-of-range panic values in RED so no critical patient result is missed.',
+      'High-speed numerical bench entry matching your paper lab sheets. Automatically flags out-of-range panic values in RED, and drafts 1-click provisional AI clinical remarks for pathologist sign-off.',
     highlights: [
       'Age and gender-stratified biological reference ranges auto-applied',
       'Automated visual flagging: RED for critical panic, AMBER for borderline',
-      'Historical delta check compares with patient’s previous lab visits',
+      '✨ AI Clinical Impression Assistant: 1-click clinical remarks drafting for abnormal panels',
       'One-touch normal fill button for high-throughput screening profiles',
     ],
     icon: FileText,
@@ -60,17 +60,17 @@ const stages: WorkflowStageProps[] = [
   {
     stepNumber: '04',
     badge: 'Patient Delight',
-    title: 'Certified Pathologist Sign-Off & 1-Click WhatsApp PDF Delivery',
+    title: 'Certified Pathologist Sign-Off, WhatsApp PDF & Bilingual AI Explainer',
     timeEstimate: 'Sub-Second Dispatch',
     problem:
-      'Downloading PDFs to desktops, manually saving 30+ stranger numbers into personal phone contacts daily, and searching chat lists wastes hours every evening.',
+      'Downloading PDFs, manually saving phone contacts, and answering repeated anxious phone calls asking "Report mein kya aaya hai?" wastes hours every evening.',
     solution:
-      'Deliver finalized, certified reports in 1 click directly to the patient’s WhatsApp number. Patients receive an authenticated PDF download with a tamper-proof public QR verification token for referring physicians.',
+      'Deliver certified reports in 1 click directly to WhatsApp with tamper-proof QR tokens. Includes an AI-generated Bilingual Smart Health Summary (Hindi & English) that explains findings in plain words and directs patients to their doctor.',
     highlights: [
       'Direct WhatsApp message link with personalized patient greeting',
-      'Zero phone contact saving required on lab technician phone',
+      '✨ Bilingual Patient Health Summary (Hindi & English) explaining findings in plain words',
       'Tamper-proof public QR verification token prevents forged report disputes',
-      'Drastically cuts down on patient phone calls asking "Is my report ready?"',
+      'Drastically cuts down on patient phone calls asking "What does my report mean?"',
     ],
     icon: Send,
   },
